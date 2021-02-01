@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  {{ custvalue.Customer.firstName }}
+{% endblock %}
+
+{% block content %}
+
+
+    <table class="table">
+    <thead class="thead-inverse">
+      <tr>
+
+        <th>Date Requested for Order</th>
+        <th>Line Item Status</th>
+        <th>Line Item Type</th>
+        <th>Shipping Address Street</th>
+          <th>Shipping Address Street line 2</th>
+          <th>Shipping Address City</th>
+          <th>Shipping Address State</th>
+        <th>Name of Item</th>
+        <th>Date Request of Line Item</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for row in custvalue %}
+            <tr>
+
+            <td>{{ row.DateRequested }}</td>
+            <td>{{ row.lineItemStatus }}</td>
+            <td>{{ row.lineItemType }}</td>
+            <td>{{ row.street}}</td>
+            <td>{{ row.street2}}</td>
+            <td>{{ row.city}}</td>
+            <td>{{ row.state}}</td>
+            <td>{{ row.itemName }}</td>
+          <td>{{ row.dateRequested }}</td>
+            {% endfor %}
+        </tr>
+    </tbody>
+  </table>
+{% endblock %}

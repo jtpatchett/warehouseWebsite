@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+
+
+{% block title %}Create a new Customer{% endblock %}
+
+{% block breadcrumb %}
+
+{% endblock %}
+
+{% block content %}
+  <form method="post">
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="id_firstName">Customer First Name</label>
+      <input type="text" class="form-control" id="id_firstName" name="firstName">
+    </div>
+    <div class="form-group">
+      <label for="id_lastName">Customer Last Name</label>
+      <input type="text" class="form-control" id="id_lastName" name="lastName">
+    </div>
+      <div class="form-group">
+      <label for="id_State">State Initials</label>
+      <input type="text" class="form-control" id="id_State" name="State">
+      </div>
+      <div class="form-group">
+      <label for="id_City">City</label>
+      <input type="text" class="form-control" id="id_City" name="City">
+      </div>
+      <div class="form-group">
+      <label for="id_Street">Street</label>
+      <input type="text" class="form-control" id="id_Street" name="Street">
+      </div>
+            <div class="form-group">
+      <label for="id_Street2">Street Line 2</label>
+      <input type="text" class="form-control" id="id_Street2" name="Street2">
+      </div>
+    <div class="form-group">
+      <label for="id_DispRate">Update Disposal Rate</label>
+      <input type="text" class="form-control" id="id_DispRate" name="DispRate">
+    </div>
+    <div class="form-group">
+      <label for="id_StorRate">Update Storage Rate</label>
+      <input type="text" class="form-control" id="id_StorRate" name="StorRate">
+    </div>
+    <button type="submit" class="btn btn-success">Post</button>
+  </form>
+{% endblock %}

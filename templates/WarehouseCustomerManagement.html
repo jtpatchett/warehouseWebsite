@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block breadcrumb %}
+  <li class="breadcrumb-item active">Warehouse Admin Page</li>
+{% endblock %}
+
+{% block content %}
+<a class="btn btn-primary" href="/newCust">Insert New Customer</a>
+<a class="btn btn-primary" href="/viewCustInfoSubmit">View Customer Information</a>
+<a class="btn btn-primary" href="/getCustPricing">Create Customer Inventory Pricing</a>
+<a class="btn btn-primary" href="/addNewItem">Add an Item</a>
+<a class="btn btn-primary" href="/viewCustomerInventory">View Customer Inventory</a>
+<a class="btn btn-primary" href="/sendInvoice">Send Customer Inventory Invoices</a>
+<a class="btn btn-primary" href="/addEmployee">Add or change Employee Status</a>
+<a class="btn btn-primary" href="/addPosition">Add Permanent Position</a>
+<a class="btn btn-primary" href="/addContingent">Add Contingent Position</a>
+<a class="btn btn-primary" href="/setOrdActWH">Set a warehouse to manage action of Line Item</a>
+<a class="btn btn-primary" href="/processLineItem">Process Customer Line Items</a>
+<a class="btn btn-primary" href="/shipLineItem">Ship Line Item</a>
+<a class="btn btn-primary" href="/viewCustomerOrders">View Customer Orders</a>
+<a class="btn btn-primary" href="/viewDailyOrders">View Daily Orders</a>
+<a class="btn btn-primary" href="/viewInventory">View available Inventory</a>
+
+{% endblock %}

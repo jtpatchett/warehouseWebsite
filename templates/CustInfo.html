@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  {{ custvalue.firstName }}
+{% endblock %}
+
+
+{% block content %}
+
+
+    <table class="table">
+    <thead class="thead-inverse">
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>State</th>
+        <th>City</th>
+        <th>Street</th>
+        <th>Street Line 2</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>{{ custvalue.firstName }}</td>
+          <td>{{ custvalue.lastName }}</td>
+          <td>{{ custvalue.CustAddress.state }}</td>
+          <td>{{ custvalue.CustAddress.city }}</td>
+          <td>{{ custvalue.CustAddress.street }}</td>
+            <td>{{ custvalue.CustAddress.street2 }}</td>
+        </tr>
+    </tbody>
+  </table>
+{% endblock %}

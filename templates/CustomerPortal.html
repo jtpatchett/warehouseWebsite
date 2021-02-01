@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block breadcrumb %}
+  <li class="breadcrumb-item active">Warehouse Admin Page</li>
+{% endblock %}
+
+{% block content %}
+<a class="btn btn-primary" href="/addlineItem">Create Line Item for Order</a>
+<a class="btn btn-primary" href="/viewCustomerOrders">View Order History</a>
+<a class="btn btn-primary" href="/getBalance">View Account Balance</a>
+<a class="btn btn-primary" href="/viewCustInvoice">View warehouse inventory invoices</a>
+<a class="btn btn-primary" href="/payInvoice">Pay Warehouse Inventory Invoices</a>
+<a class="btn btn-primary" href="/changeStoreInventory">Change Store Inventory</a>
+<a class="btn btn-primary" href="/enableStore">Enable Store</a>
+<a class="btn btn-primary" href="/createOrder">Create Order</a>
+<a class="btn btn-primary" href="/viewEndUsers">View End User Customers</a>
+<a class="btn btn-primary" href="/viewEndOrders">View End User Orders</a>
+
+{% endblock %}

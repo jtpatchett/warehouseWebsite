@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block breadcrumb %}
+  <li class="breadcrumb-item active">End User Page</li>
+{% endblock %}
+
+{% block content %}
+<a class="btn btn-primary" href="/createAccount">Create End user Account</a>
+<a class="btn btn-primary" href="/viewStoreInventory">View Store Inventory</a>
+<a class="btn btn-primary" href="/createStoreOrder">Create Order</a>
+<a class="btn btn-primary" href="/checkStoreOrderStatus">Check Order Status</a>
+
+{% endblock %}

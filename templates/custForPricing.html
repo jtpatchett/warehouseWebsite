@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Change Customer Inventory Pricing{% endblock %}
+
+{% block content %}
+
+<form method="POST">
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="id_custID">Customer ID</label>
+      <input type="text" class="form-control" id="id_custID" name="id_custID">
+    </div>
+        <div class="form-group">
+      <label for="id_DispRate">Update Disposal Rate</label>
+      <input type="text" class="form-control" id="id_DispRate" name="DispRate">
+    </div>
+    <div class="form-group">
+      <label for="id_StorRate">Update Storage Rate</label>
+      <input type="text" class="form-control" id="id_StorRate" name="StorRate">
+    </div>
+    <button type="submit" class="btn btn-success">Post</button>
+</form>
+{% endblock %}

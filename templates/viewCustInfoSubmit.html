@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}View Customer Information{% endblock %}
+
+{% block content %}
+
+<form method="POST">
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="id_custID">Customer ID</label>
+      <input type="text" class="form-control" id="id_custID" name="id_custID">
+    </div>
+    <button type="submit" class="btn btn-success">Post</button>
+</form>
+{% endblock %}

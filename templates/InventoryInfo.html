@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  {{ custvalue.Customer.firstName }}
+{% endblock %}
+
+{% block content %}
+
+
+    <table class="table">
+    <thead class="thead-inverse">
+      <tr>
+
+        <th>Item Name</th>
+        <th>Amount</th>
+
+      </tr>
+    </thead>
+    <tbody>
+    {% for row in custvalue %}
+            <tr>
+
+            <td>{{ row.itemName}}</td>
+            <td>{{ row.totals }}</td>
+
+            {% endfor %}
+        </tr>
+    </tbody>
+  </table>
+{% endblock %}

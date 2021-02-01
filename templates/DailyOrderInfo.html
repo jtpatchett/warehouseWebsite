@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  {{ dailyord.DateRequested }}
+{% endblock %}
+
+{% block content %}
+
+
+    <table class="table">
+    <thead class="thead-inverse">
+      <tr>
+
+        <th>Date Requested for Order</th>
+          <th>Ordering Cust</th>
+        <th>Line Item Status</th>
+        <th>Line Item Type</th>
+        <th>Shipping Address</th>
+        <th>Name of Item</th>
+        <th>Date Request of Line Item</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for row in dailyord %}
+    {% for LI in row.ordRefMain.all %}
+            <tr>
+            <td>{{ row.DateRequested }}</td>
+            <td>{{ row.orderingCust }}</td>
+                <td>{{ LI.lineItemStatus }}</td>
+            <td>{{ LI.lineItemType }}</td>
+            <td>{{ LI.shippingLoc}}</td>
+            <td>{{ LI.itemID }}</td>
+          <td>{{ LI.dateRequested }}</td>
+            {% endfor %}
+            {% endfor %}
+
+        </tr>
+    </tbody>
+  </table>
+{% endblock %}

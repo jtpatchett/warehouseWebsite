@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  {{ custvalue.Customer.firstName }}
+{% endblock %}
+
+{% block content %}
+
+
+    <table class="table">
+    <thead class="thead-inverse">
+      <tr>
+
+        <th>Order ID</th>
+        <th>Item</th>
+        <th>Amount</th>
+        <th>Order Status</th>
+        <th>Ordering Customer</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for row in strOrd%}
+            <tr>
+            <td>{{ row.id}}</td>
+            <td>{{ row.itemOrd}}</td>
+            <td>{{ row.amtOrd }}</td>
+            <td>{{ row.strOrdSts}}</td>
+            <td>{{ row.endCust}}</td>
+            {% endfor %}
+        </tr>
+    </tbody>
+  </table>
+{% endblock %}

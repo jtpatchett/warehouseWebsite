@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  {{ cust }}
+{% endblock %}
+
+{% block content %}
+
+
+    <table class="table">
+    <thead class="thead-inverse">
+      <tr>
+
+        <th>Customer Name</th>
+        <th>Account Balance</th>
+
+      </tr>
+    </thead>
+    <tbody>
+            <tr>
+
+            <td>{{ cust }}</td>
+            <td>{{ totals }}</td>
+
+        </tr>
+    </tbody>
+  </table>
+{% endblock %}

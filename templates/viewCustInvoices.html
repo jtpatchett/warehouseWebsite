@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  {{ title }}
+{% endblock %}
+
+{% block content %}
+
+
+    <table class="table">
+    <thead class="thead-inverse">
+      <tr>
+
+        <th>invDate</th>
+        <th>Date Paid</th>
+         <th>Status</th>
+          <th>Amount Left Over</th>
+          <th>Date Fulfilled</th>
+
+      </tr>
+    </thead>
+    <tbody>
+    {% for row in custInvs%}
+            <tr>
+
+            <td>{{ row.invDate}}</td>
+            <td>{{ row.DatePaid }}</td>
+            <td>{{ row.InvoiceStatus }}</td>
+                <td>{{ row.amountPaid }}</td>
+                <td>{{ row.fulfillmentDate }}</td>
+
+
+            {% endfor %}
+        </tr>
+    </tbody>
+  </table>
+{% endblock %}

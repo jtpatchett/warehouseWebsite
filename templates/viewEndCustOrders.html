@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  {{ title }}
+{% endblock %}
+
+{% block content %}
+
+
+    <table class="table">
+    <thead class="thead-inverse">
+      <tr>
+
+        <th>Item Ordered</th>
+        <th>Store Ordered From</th>
+         <th>Amount Ordered</th>
+
+      </tr>
+    </thead>
+    <tbody>
+    {% for row in storeItems%}
+            <tr>
+
+            <td>{{ row.refItem}}</td>
+            <td>{{ row.refStore }}</td>
+            <td>{{ row.amount }}</td>
+
+            {% endfor %}
+        </tr>
+    </tbody>
+  </table>
+{% endblock %}
